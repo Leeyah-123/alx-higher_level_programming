@@ -6,6 +6,6 @@ def pow(a, b):
             result = a * result
     else:
         result = a
-        for i in range(1, b):
+        for i in range(1, b * -1):
             result = a / result
     return result
