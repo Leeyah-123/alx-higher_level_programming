@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_sample(matrix=[]):
-    new_matrix = []
+    new_matrix = matrix.copy()
+
     for i in range(len(matrix)):
-        row = list(map(lambda x: x * x, matrix[i]))
-        new_matrix.append(row)
-    return new_matrix
+        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
+    return (new_matrix)
