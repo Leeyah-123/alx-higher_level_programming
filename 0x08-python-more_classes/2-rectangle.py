@@ -61,7 +61,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """ method that sets the height of the rectangle
+        """ method that sets the height
 
         Raises:
             TypeError: if the height is not an integer
@@ -75,3 +75,26 @@ class Rectangle:
             raise ValueError("height must be >= 0")
 
         self.__height = value
+
+    def area(self):
+        """ method that returns the area of the rectangle
+
+        Returns:
+            area of the rectanglw
+
+        """
+
+        return self.height * self.width
+
+    def perimeter(self):
+        """ method that returns the perimeter of the rectangle
+
+        Returns:
+            perimeter of the rectangle
+
+        """
+
+        if self.width == 0 or self.height == 0:
+            return 0
+
+        return (2 * (self.width + self.height))
